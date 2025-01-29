@@ -1,16 +1,16 @@
-class Libro(val titulo: String, val autor: String, val numPaginas: Int, clasificacion: Int) {
+class Libro(val titulo: String, val autor: String, val numPaginas: Int, calificacion: Int) {
 
-    var clasificacion: Int = 0
+    var calificacion: Int = 0
         set(value) {
             if(value in 0..10){
                 field = value
             }else{
-                throw IllegalArgumentException ( "caca" )
+                throw IllegalArgumentException ( "Requiere estar entre 0 y 10." )
             }
         }
 
 
     init {
-        require(clasificacion in 0..10){"Requiere que esté entre el rango 0-10"}
+        require(calificacion in 0..10){"Requiere que esté entre el rango 0-10"}
     }
 }
